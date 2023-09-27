@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http'; // Add this import
 import { PendingOrdersComponent } from './pending-orders/pending-orders.component';
 import { CookieService } from 'ngx-cookie-service';
 import { UserListComponent } from './user-list/user-list.component';
+import { RegistrationComponent } from './registration/registration.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { UserListComponent } from './user-list/user-list.component';
     DashboardComponent,
     LayoutComponent,
     PendingOrdersComponent,
-    UserListComponent
+    UserListComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,

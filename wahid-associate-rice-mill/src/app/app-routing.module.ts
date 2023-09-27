@@ -5,10 +5,16 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LayoutComponent } from './layout/layout.component';
 import { PendingOrdersComponent } from './pending-orders/pending-orders.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
+
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'registration', component: RegistrationComponent }, // Add this line for registration
+
 
   {
     path: 'dashboard',

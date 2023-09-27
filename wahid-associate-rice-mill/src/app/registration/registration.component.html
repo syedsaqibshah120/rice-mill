@@ -1,0 +1,84 @@
+<div class="page-header align-items-start min-vh-100" style="background-image: url('https://images.unsplash.com/photo-1686820740687-426a7b9b2043?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+  <span class="mask bg-gradient-dark opacity-7"></span>
+  <div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+          <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
+            <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Registration</h4>
+          </div>
+        </div>
+     <div class="card-body">
+          <form (ngSubmit)="onSubmit()" #registrationForm="ngForm" class="registration-form">
+            <!-- Profile Photo -->
+            <div class="mb-3">
+              <label for="profilePhoto" class="form-label">Profile Photo</label>
+              <input type="file" class="form-control" id="profilePhoto" name="profilePhoto" accept="image/*">
+            </div>
+
+            <!-- First Name -->
+            <div class="mb-3">
+              <label for="firstName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="firstName" name="firstName" ngModel required>
+            </div>
+
+            <!-- Last Name -->
+            <div class="mb-3">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastName" name="lastName" ngModel required>
+            </div>
+
+            <!-- Gender -->
+            <div class="mb-3">
+              <label class="form-label">Gender</label>
+              <select class="form-select" name="gender" ngModel required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="mb-3">
+              <label for="dob" class="form-label">Date of Birth</label>
+              <input type="date" class="form-control" id="dob" name="dob" ngModel required>
+            </div>
+
+            <!-- Country -->
+            <div class="mb-3">
+              <label for="country" class="form-label">Country</label>
+              <input type="text" class="form-control" id="country" name="country" ngModel required>
+            </div>
+
+            <!-- Province -->
+            <div class="mb-3">
+              <label for="province" class="form-label">Province</label>
+              <input type="text" class="form-control" id="province" name="province" ngModel required>
+            </div>
+
+            <!-- City -->
+            <div class="mb-3">
+              <label for="city" class="form-label">City</label>
+              <input type="text" class="form-control" id="city" name="city" ngModel required>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="mb-3">
+              <label for="phoneNumber" class="form-label">Phone Number (+92xxxxxxxxxx)</label>
+              <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" ngModel required pattern="^\+92\d{10}$">
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" ngModel required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
