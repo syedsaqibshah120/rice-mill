@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Wahid Associates\\WahidRiceTradingAPI\\WahidRiceTradingAPI.csproj": {}
+    "D:\\Projects\\Wahid Associates\\Projects\\WahidRiceTradingAPI\\WahidRiceTradingAPI.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Wahid Associates\\WahidRiceTradingAPI\\WahidRiceTradingAPI.csproj": {
+    "D:\\Projects\\Wahid Associates\\Projects\\WahidRiceTradingAPI\\WahidRiceTradingAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Wahid Associates\\WahidRiceTradingAPI\\WahidRiceTradingAPI.csproj",
+        "projectUniqueName": "D:\\Projects\\Wahid Associates\\Projects\\WahidRiceTradingAPI\\WahidRiceTradingAPI.csproj",
         "projectName": "WahidRiceTradingAPI",
-        "projectPath": "D:\\Projects\\Wahid Associates\\WahidRiceTradingAPI\\WahidRiceTradingAPI.csproj",
+        "projectPath": "D:\\Projects\\Wahid Associates\\Projects\\WahidRiceTradingAPI\\WahidRiceTradingAPI.csproj",
         "packagesPath": "C:\\Users\\Logical\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Wahid Associates\\WahidRiceTradingAPI\\obj\\",
+        "outputPath": "D:\\Projects\\Wahid Associates\\Projects\\WahidRiceTradingAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

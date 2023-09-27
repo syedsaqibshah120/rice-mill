@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VodYeKHYXcB0EaESIEwQRcvMORjYp8FIyGDf609YoMV/RjVJgF4wcVt93aJDVCE5A4JJnWJ9b326N4BF7kZ/dQ==",
+  "dgSpecHash": "TjYCoxYQQNqAttmxR3Tz0lQsNaevTvZ6fboKo0qCQZJ20heZuunW8+Lq8VIoTnwrxfrKta68QeSyp2naKYL+tA==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\Wahid Associates\\WahidRiceTradingAPI\\WahidRiceTradingAPI.csproj",
+  "projectFilePath": "D:\\Projects\\Wahid Associates\\Projects\\WahidRiceTradingAPI\\WahidRiceTradingAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Logical\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Logical\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
