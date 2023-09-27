@@ -34,6 +34,7 @@ if(this.passcode == '')
 
     this.userService.GetUserInfo(this.passcode).subscribe(
       (response: any) => {
+        console.log(response);
         if(response.data.id  == this.passcode)
         {
           this.cookieService.set('userName', response.data.first_name + ' ' + response.data.last_name);
