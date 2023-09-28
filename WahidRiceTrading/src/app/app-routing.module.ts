@@ -6,6 +6,7 @@ import { ClientLayoutComponent } from './client/client-layout/client-layout.comp
 import { AboutUsComponent } from './client/about-us/about-us.component';
 import { HomeComponent } from './client/home/home.component';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+import { ClientLoginComponent } from './client/client-login/client-login.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,7 @@ const routes: Routes = [
     children: [
       { path: 'about-us', component: AboutUsComponent },
       { path: 'home', component: HomeComponent },
+      {path: 'login', component:ClientLoginComponent},
     ],
   },
   { path: '', redirectTo: '/client/home', pathMatch: 'full' },

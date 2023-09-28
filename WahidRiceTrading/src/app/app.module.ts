@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './admin/admin-layout/admin-layout.component';
 import { ClientLayoutComponent } from './client/client-layout/client-layout.component';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+import { ClientLoginComponent } from './client/client-login/client-login.component';
 
 @NgModule({
-  declarations: [AppComponent, AdminLayoutComponent, ClientLayoutComponent, AdminLoginComponent],
+  declarations: [AppComponent, AdminLayoutComponent, ClientLayoutComponent, AdminLoginComponent, ClientLoginComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
