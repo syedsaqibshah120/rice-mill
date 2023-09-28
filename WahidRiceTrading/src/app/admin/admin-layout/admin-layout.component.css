@@ -1,0 +1,10 @@
+/* Admin layout styles */
+.admin-header {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .admin-sidebar {
+    background-color: #222;
+    color: #fff;
+  }
