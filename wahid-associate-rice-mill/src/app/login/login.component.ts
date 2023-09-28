@@ -34,12 +34,10 @@ if(this.passcode == '')
 
     this.userService.GetUserInfo(this.passcode).subscribe(
       (response: any) => {
-        console.log(response);
-        if(response.data.id  == this.passcode)
+        if(response.userID  == this.passcode)
         {
-          this.cookieService.set('userName', response.data.first_name + ' ' + response.data.last_name);
+          this.cookieService.set('userName', response.firstName + ' ' + response.lastName);
           this.router.navigate(['./dashboard']);
-          console.log(response.data);
         }
      
       },
