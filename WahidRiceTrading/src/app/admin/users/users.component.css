@@ -1,0 +1,8 @@
+.nav-buttons {
+    white-space: nowrap; /* Prevent line breaks */
+  }
+  
+  .nav-buttons a {
+    display: inline-block;
+    margin-right: 10px; /* Adjust the margin as needed */
+  }

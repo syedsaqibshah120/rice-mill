@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using WahidRiceTradingAPI.Context;
 using WahidRiceTradingAPI.Models;
+using WahidRiceTradingAPI.Models.ViewModels;
 
 namespace WahidRiceTradingAPI.Services
 {
@@ -8,6 +9,7 @@ namespace WahidRiceTradingAPI.Services
     {
         Task<IEnumerable<User>> GetAllUsersAsync();
         Task<User> GetUserByIdAsync(int userId);
+        Task<User> Login(AdminLoginVM user);
         Task<User> CreateUserAsync(User user);
         Task<bool> UpdateUserAsync(int userId, User user);
         Task<bool> DeleteUserAsync(int userId);
@@ -30,6 +32,11 @@ namespace WahidRiceTradingAPI.Services
             return await _context.Users.FindAsync(userId);
         }
 
+        public async Task<User> Login(AdminLoginVM user)
+        {
+            return await _context.Users.Where(x => x.UserName == user.UserName && x.Password == user.Password).FirstOrDefaultAsync();
+        }
+
         public async Task<User> CreateUserAsync(User user)
         {
             _context.Users.Add(user);
@@ -46,9 +53,11 @@ namespace WahidRiceTradingAPI.Services
                 return false; // User not found
             }
 
-            // Update user properties as needed
-            //existingUser.FirstName = user.FirstName;
-            //existingUser.Email = user.Email;
+            existingUser.FirstName = user.FirstName;
+            existingUser.LastName = user.LastName;
+            existingUser.UserName = user.UserName;
+            existingUser.Password = user.Password;
+            _context.Users.Update(existingUser);
 
             await _context.SaveChangesAsync();
             return true;

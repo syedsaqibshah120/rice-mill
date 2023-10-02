@@ -7,6 +7,8 @@ import { AboutUsComponent } from './client/about-us/about-us.component';
 import { HomeComponent } from './client/home/home.component';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 import { ClientLoginComponent } from './client/client-login/client-login.component';
+import { UsersComponent } from './admin/users/users.component';
+import { AddeditUserComponent } from './admin/addedit-user/addedit-user.component';
 
 const routes: Routes = [
   {
@@ -14,10 +16,12 @@ const routes: Routes = [
     component: AdminLayoutComponent,
     children: [
       { path: 'dashboard', component: AdminDashboardComponent },
-     
+      { path: 'users', component: UsersComponent },
+      { path: 'user/edit/:id', component: AddeditUserComponent },
+      { path: 'user/add', component: AddeditUserComponent },
     ],
   },
-  { path: 'admin-login', component: AdminLoginComponent },
+  { path: 'login', component: AdminLoginComponent },
   {
     path: 'client',
     component: ClientLayoutComponent,

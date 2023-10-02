@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WahidRiceTradingAPI.Context;
+using WahidRiceTradingAPI.Helper;
 using WahidRiceTradingAPI.Models;
 using WahidRiceTradingAPI.Models.ViewModels;
 using WahidRiceTradingAPI.Services;
@@ -38,6 +39,19 @@ namespace WahidRiceTradingAPI.Controllers.Account
             }
 
             return Ok(user);
+        }
+
+        // POST: api/users
+        [HttpPost("login")]
+        public async Task<ActionResult<ApiResponse<User>>> Login(AdminLoginVM userVM)
+        {
+            var user = await _userService.Login(userVM);
+            if(user == null)
+            {
+                return ApiResponseFactory.RecordNotFound<User>();
+            }
+
+            return ApiResponseFactory.Success(user);
         }
 
         // POST: api/users
