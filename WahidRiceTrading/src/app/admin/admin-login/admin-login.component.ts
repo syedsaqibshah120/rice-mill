@@ -5,7 +5,10 @@ import { UserService } from 'src/app/shared/services/user.service';
 @Component({
   selector: 'app-admin-login',
   templateUrl: './admin-login.component.html',
-  styleUrls: ['../../../assets/admin/css/admin-styles.css']
+  styleUrls: [
+    '../../../assets/admin/css/admin-styles.css',
+    './admin-login.component.html',
+  ],
 })
 export class AdminLoginComponent {
   userName = '';
@@ -28,10 +31,9 @@ export class AdminLoginComponent {
     this.loginService.login(this.userName, this.password).subscribe(
       (response) => {
         console.log(response);
-    
-        if (response.statusCode
-          === 200) {
-          this._router.navigate(["admin/dashboard"]);
+
+        if (response.statusCode === 200) {
+          this._router.navigate(['admin/dashboard']);
         } else if (response.statusCode === 404) {
           // Check for the 400 status code (Bad Request)
           this.showErrorMsg = true;

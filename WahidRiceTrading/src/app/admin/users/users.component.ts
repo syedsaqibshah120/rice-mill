@@ -1,27 +1,35 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/shared/services/user.service';
 
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css','../../../assets/admin/css/admin-styles.css']
+  styleUrls: [
+    './users.component.css',
+    '../../../assets/admin/css/admin-styles.css',
+  ],
 })
-export class UsersComponent {
-  users:any[] = [];
-  constructor(private _router: Router, private userService: UserService) {}
+export class UsersComponent implements OnInit {
+  users: any[] = [];
+  // columns = [
+  //   { name: 'firstName' },
+  //   { name: 'lastName' },
+  //   // ... other columns
+  // ];
 
-  ngOnInit()
-  {
-   this.getUsers();
+  constructor(private userService: UserService) {}
+
+  ngOnInit() {
+    this.getUsers();
   }
 
-  getUsers(){
+  getUsers() {
     this.userService.getAllUsers().subscribe((data: any[]) => {
       this.users = data;
     });
   }
-  deleteUser(id:number){
 
+  deleteUser(id: number) {
+    // Implement delete logic
   }
 }

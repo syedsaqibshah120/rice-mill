@@ -57,6 +57,17 @@ namespace WahidRiceTradingAPI.Services
             existingUser.LastName = user.LastName;
             existingUser.UserName = user.UserName;
             existingUser.Password = user.Password;
+            existingUser.Email = user.Email;
+            existingUser.PhoneNumber = user.PhoneNumber;
+            existingUser.BirthDate = user.BirthDate;
+            existingUser.Address = user.Address;
+            existingUser.City = user.City;
+            existingUser.State = user.State;
+            existingUser.ZipCode = user.ZipCode;
+            existingUser.Country = user.Country;
+            existingUser.IsActive = user.IsActive;
+            existingUser.RegistrationDate = user.RegistrationDate;
+
             _context.Users.Update(existingUser);
 
             await _context.SaveChangesAsync();
