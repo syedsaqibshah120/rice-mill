@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Wahid Associates\\Projects\\WahidRiceTradingAPI\\WahidRiceTradingAPI.csproj": {}
+    "D:\\Projects\\Rice Trading\\WahidRiceTradingAPI\\WahidRiceTradingAPI.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Wahid Associates\\Projects\\WahidRiceTradingAPI\\WahidRiceTradingAPI.csproj": {
+    "D:\\Projects\\Rice Trading\\WahidRiceTradingAPI\\WahidRiceTradingAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Wahid Associates\\Projects\\WahidRiceTradingAPI\\WahidRiceTradingAPI.csproj",
+        "projectUniqueName": "D:\\Projects\\Rice Trading\\WahidRiceTradingAPI\\WahidRiceTradingAPI.csproj",
         "projectName": "WahidRiceTradingAPI",
-        "projectPath": "D:\\Projects\\Wahid Associates\\Projects\\WahidRiceTradingAPI\\WahidRiceTradingAPI.csproj",
-        "packagesPath": "C:\\Users\\Logical\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Wahid Associates\\Projects\\WahidRiceTradingAPI\\obj\\",
+        "projectPath": "D:\\Projects\\Rice Trading\\WahidRiceTradingAPI\\WahidRiceTradingAPI.csproj",
+        "packagesPath": "C:\\Users\\Umer Computer\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Rice Trading\\WahidRiceTradingAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Logical\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Umer Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

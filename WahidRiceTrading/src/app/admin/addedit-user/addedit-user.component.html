@@ -1,71 +1,190 @@
-<div class="card shadow mb-4">
-  <div class="card-header py-3">
-    <h6 class="m-0 font-weight-bold text-primary">{{ isEditMode ? "Edit User" : "Add User" }}</h6>
-  </div>
-  <div class="card-body">
-    <div class="user-form">
-      <div class="row">
-        <!-- First Column -->
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input type="text" class="form-control" id="firstName" [(ngModel)]="user.firstName" name="firstName" required />
+<div class="container">
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">
+        {{ isEditMode ? "Edit User" : "Add User" }}
+      </h6>
+    </div>
+    <div class="card-body">
+      <div class="user-form">
+        <div class="row">
+          <!-- First Column -->
+          <div class="col-md-6">
+            <!-- First Name -->
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+
+              <span class="invalid-indicator" *ngIf="isFirstNameInvalid">{{
+                firstNameErrorMessage
+              }}</span>
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                [(ngModel)]="user.firstName"
+                name="firstName"
+                required
+              />
+            </div>
+            <!-- Last Name -->
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+
+              <span class="invalid-indicator" *ngIf="isLastNameInvalid">{{
+                lastNameErrorMessage
+              }}</span>
+              <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                [(ngModel)]="user.lastName"
+                name="lastName"
+                required
+              />
+            </div>
+
+            <!-- User Name -->
+            <div class="form-group">
+              <label for="userName">User Name</label>
+              <span class="invalid-indicator" *ngIf="isUserNameInvalid">{{
+                userNameErrorMessage
+              }}</span>
+              <input
+                type="text"
+                class="form-control"
+                id="userName"
+                [(ngModel)]="user.userName"
+                name="userName"
+                required
+              />
+            </div>
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email">Email</label>
+              <span class="invalid-indicator" *ngIf="isEmailInvalid">{{
+                emailErrorMessage
+              }}</span>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                [(ngModel)]="user.email"
+                name="email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phoneNumber">Phone Number</label>
+              <span class="invalid-indicator" *ngIf="isPhoneNumberInvalid">{{
+                phoneNumberErrorMessage
+              }}</span>
+              <input
+                type="text"
+                class="form-control"
+                id="phoneNumber"
+                [(ngModel)]="user.phoneNumber"
+                name="phoneNumber"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="country">Country</label>
+              <input
+                type="text"
+                class="form-control"
+                id="country"
+                [(ngModel)]="user.country"
+                name="country"
+              />
+            </div>
           </div>
-          <div class="form-group">
-            <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" id="lastName" [(ngModel)]="user.lastName" name="lastName" required />
-          </div>
-          <div class="form-group">
-            <label for="userName">User Name</label>
-            <input type="text" class="form-control" id="userName" [(ngModel)]="user.userName" name="userName" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" [(ngModel)]="user.email" name="email" required />
-          </div>
-          <div class="form-group">
-            <label for="phoneNumber">Phone Number</label>
-            <input type="text" class="form-control" id="phoneNumber" [(ngModel)]="user.phoneNumber" name="phoneNumber" />
+
+          <!-- Second Column -->
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="birthDate">Birth Date</label>
+              <input
+                type="date"
+                class="form-control"
+                id="birthDate"
+                [(ngModel)]="user.birthDate"
+                name="birthDate"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input
+                type="text"
+                class="form-control"
+                id="address"
+                [(ngModel)]="user.address"
+                name="address"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="city">City</label>
+              <input
+                type="text"
+                class="form-control"
+                id="city"
+                [(ngModel)]="user.city"
+                name="city"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="state">State</label>
+              <input
+                type="text"
+                class="form-control"
+                id="state"
+                [(ngModel)]="user.state"
+                name="state"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="zipCode">Zip Code</label>
+              <input
+                type="text"
+                class="form-control"
+                id="zipCode"
+                [(ngModel)]="user.zipCode"
+                name="zipCode"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="isActive">Is Active</label>
+              <input
+                type="checkbox"
+                class="form-control"
+                id="isActive"
+                [(ngModel)]="user.isActive"
+                name="isActive"
+              />
+            </div>
           </div>
         </div>
 
-        <!-- Second Column -->
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="birthDate">Birth Date</label>
-            <input type="date" class="form-control" id="birthDate" [(ngModel)]="user.birthDate" name="birthDate" />
-          </div>
-          <div class="form-group">
-            <label for="address">Address</label>
-            <input type="text" class="form-control" id="address" [(ngModel)]="user.address" name="address" />
-          </div>
-          <div class="form-group">
-            <label for="city">City</label>
-            <input type="text" class="form-control" id="city" [(ngModel)]="user.city" name="city" />
-          </div>
-          <div class="form-group">
-            <label for="state">State</label>
-            <input type="text" class="form-control" id="state" [(ngModel)]="user.state" name="state" />
-          </div>
-          <div class="form-group">
-            <label for="zipCode">Zip Code</label>
-            <input type="text" class="form-control" id="zipCode" [(ngModel)]="user.zipCode" name="zipCode" />
-          </div>
-          <div class="form-group">
-            <label for="country">Country</label>
-            <input type="text" class="form-control" id="country" [(ngModel)]="user.country" name="country" />
-          </div>
-          <div class="form-group">
-            <label for="isActive">Is Active</label>
-            <input type="checkbox" class="form-control" id="isActive" [(ngModel)]="user.isActive" name="isActive" />
-          </div>
-        </div>
+        <!-- Registration Date (Hidden) -->
+        <input
+          type="hidden"
+          [(ngModel)]="user.registrationDate"
+          name="registrationDate"
+        />
+
+        <button
+          class="col-md-3 btn btn-primary btn-lg"
+          type="submit"
+          (click)="onSubmit()"
+        >
+          {{ isEditMode ? "Update" : "Add" }}
+        </button>
       </div>
-
-      <!-- Registration Date (Hidden) -->
-      <input type="hidden" [(ngModel)]="user.registrationDate" name="registrationDate" />
-
-      <button type="submit" (click)="onSubmit()" class="btn btn-primary">{{ isEditMode ? "Update" : "Add" }}</button>
     </div>
   </div>
 </div>
