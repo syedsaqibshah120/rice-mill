@@ -11686,3 +11686,11 @@ body.sidebar-toggled footer.sticky-footer {
   vertical-align: top;
   border-top: 1px solid #e3e6f0;
 }
+
+.pull-right {
+  float: right !important;
+}
+.error-label {
+  color: red;
+  font-size: 12px;
+}
